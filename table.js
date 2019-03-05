@@ -24,23 +24,28 @@ var table =d3.select(".box").append("table");
 var rows=table.selectAll("tr")
               .data(data)
               .enter()
-              .append("tr")
-              .style("color","red");
+              .append("tr");
 
 rows.append("td")
     .text(function(d){
       return d.name
-    });
+    })
+    .style("color","#279B7F");
     //.style("color","red");
     rows.append("td")
         .text(function(d){
           return d.title
-        });
+        })
+    .style("color","#D8C741");
 rows.append("td")
     .text(function(d){
       return d.day
-    });
+    })
+    .style("color","#F6B334");
 rows.append("td")
     .text(function(d){
         return d.time
-    });
+    })
+    .style("color","#E54F49");
+table.style("background-color","#173142")
+      .style("border","dashed");
